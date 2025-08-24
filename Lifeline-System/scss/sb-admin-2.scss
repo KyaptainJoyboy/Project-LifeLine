@@ -1,0 +1,56 @@
+// Import Custom SB Admin 2 Variables (Overrides Default Bootstrap Variables)
+@use "variables";
+
+// Import Bootstrap
+@use "../vendor/bootstrap/scss/bootstrap";
+
+// Import Custom SB Admin 2 Mixins and Components
+@use "mixins";
+@use "global";
+@use "utilities";
+
+// Custom Components
+@use "dropdowns";
+@use "navs";
+@use "buttons";
+@use "cards";
+@use "charts";
+@use "login";
+@use "error";
+@use "footer";
+
+// Custom styles for Health Prediction Popups
+.consent-popup,
+.emergency-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); // Semi-transparent background
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; // Ensure it's above other content
+
+  &.d-none { // Ensure display: none works as expected
+    display: none !important;
+  }
+}
+
+.consent-content,
+.emergency-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px; // Limit width
+}
+
+.emergency-content {
+  border: 2px solid variables.$danger; // Use danger color for emergency
+  h5 {
+    color: variables.$danger;
+  }
+}

@@ -1,0 +1,74 @@
+// Global component styles
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
+// Main page wrapper - Medical Theme
+#wrapper {
+  display: flex;
+  #content-wrapper {
+    background-color: variables.$white; // Reverted to use namespace
+    width: 100%;
+    overflow-x: hidden;
+    #content {
+      flex: 1 0 auto;
+      padding: 2rem;
+      
+      // Health Dashboard Styles
+      .health-metric {
+        border-left: 4px solid;
+        padding-left: 1rem;
+        margin-bottom: 1.5rem;
+
+        &.heart-rate { border-color: variables.$heart-rate; } // Reverted to use namespace
+        &.blood-pressure { border-color: variables.$blood-pressure; } // Reverted to use namespace
+        &.spo2 { border-color: variables.$spo2; } // Reverted to use namespace
+        &.glucose { border-color: variables.$glucose; } // Reverted to use namespace
+        &.temperature { border-color: variables.$temperature; } // Reverted to use namespace
+      }
+    }
+  }
+}
+
+// Set container padding to match gutter width instead of default 15px
+.container,
+.container-fluid {
+  padding-left: variables.$grid-gutter-width; // Reverted to use namespace
+  padding-right: variables.$grid-gutter-width; // Reverted to use namespace
+}
+
+// Scroll to top button
+.scroll-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  text-align: center;
+  color: variables.$white; // Reverted to use namespace
+  background: fade-out(variables.$gray-800, .5); // Reverted to use namespace
+  line-height: 46px;
+  &:focus,
+  &:hover {
+    color: white;
+  }
+  &:hover {
+    background: variables.$gray-800; // Reverted to use namespace
+  }
+  i {
+    font-weight: 800;
+  }
+}
