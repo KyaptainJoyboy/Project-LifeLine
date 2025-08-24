@@ -44,12 +44,12 @@ Start the Flask + WebSocket server:
 python app.py
 ```
 
-- The web dashboard will be available at [http://localhost:5000/](http://localhost:5000/)
-- WebSocket server listens on port 5001 for device connections.
+- The web dashboard will be available at [http://192.168.1.42:5000/](http://192.168.1.42:5000/)  
+- WebSocket server listens on **192.168.1.42:5001** for device connections.
 
 ### 4. Using the Dashboard
 
-- Open your browser to [http://localhost:5000/](http://localhost:5000/)
+- Open your browser to [http://192.168.1.42:5000/](http://192.168.1.42:5000/)  
 - Connect your embedded device (see Lifeline-Embedd docs) to send real-time data.
 
 ## File Structure
